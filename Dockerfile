@@ -10,4 +10,4 @@ RUN pip install -r requirements.txt
 
 # ENTRYPOINT ["./entrypoint.sh"]
 
-CMD ["uvicorn", "web_app:app", "--host", "0.0.0.0", "--port", "8080"]
+CMD ["uvicorn", "web_app.main:app", "--host", "0.0.0.0", "--port", "8080"]
