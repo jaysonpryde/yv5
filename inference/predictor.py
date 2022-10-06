@@ -18,6 +18,7 @@ class YV5Predictor:
     _test_image = "/usr/src/app/data/images/bus.jpg"
 
     def __init__(self):
+        torch.hub.set_dir(self._img_dir)
         self._model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
 
     def test_predict(self):
