@@ -19,7 +19,8 @@ class YV5Predictor:
 
     def __init__(self):
         torch.hub.set_dir(self._img_dir)
-        self._model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
+        self._model = torch.hub.load('ultralytics/yolov5', 'yolov5s',
+                                     trust_repo=True)
 
     def test_predict(self):
         predictions = {"predictions": []}
