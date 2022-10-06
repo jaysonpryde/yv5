@@ -1,0 +1,2 @@
+@Library('cicd-shared-lib') _
+postmerge(git_priv_key: "github-jaysonpryde-priv", image: "ci_cd_v1")
