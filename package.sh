@@ -2,6 +2,6 @@
 set -e
 
 VERSION=${1:-latest}
-IMAGE="ci_cd_v1"
+IMAGE="yv5"
 
 docker build -f package.dockerfile -t ${IMAGE}:${VERSION} .
