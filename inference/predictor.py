@@ -14,11 +14,13 @@ from pathlib import Path
 
 class YV5Predictor:
     _model = None
-    _img_dir = "/usr/src/yv5"
+    _img_dir = "/usr/src/yv5/models/"
     _test_image = "/usr/src/app/data/images/bus.jpg"
 
     def __init__(self):
-        self._model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
+        torch.hub.set_dir(self._img_dir)
+        self._model = torch.hub.load('ultralytics/yolov5', 'yolov5s',
+                                     trust_repo=True)
 
     def test_predict(self):
         predictions = {"predictions": []}
