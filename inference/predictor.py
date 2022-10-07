@@ -14,7 +14,7 @@ from pathlib import Path
 
 class YV5Predictor:
     _model = None
-    _img_dir = "/usr/src/yv5"
+    _img_dir = "/usr/src/yv5/.cache/"
     _test_image = "/usr/src/app/data/images/bus.jpg"
 
     def __init__(self):
