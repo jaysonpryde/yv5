@@ -1,2 +1,2 @@
 @Library('cicd-shared-lib') _
-postmergeYV5(git_priv_key: "github-jaysonpryde-priv", image: "ci_cd_v1")
+postmergeYV5(git_priv_key: "github-jaysonpryde-priv", image: "yv5_demo")
